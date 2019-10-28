@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.carrotlib.jianmipay.mapper.mapper.PayOrderMapper" >
+  <resultMap id="BaseResultMap" type="com.carrotlib.jianmipay.mapper.model.PayOrder" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="pay_order_id" property="payOrderId" jdbcType="VARCHAR" />
+    <result column="mch_id" property="mchId" jdbcType="VARCHAR" />
+    <result column="mch_order_no" property="mchOrderNo" jdbcType="VARCHAR" />
+    <result column="channel_id" property="channelId" jdbcType="VARCHAR" />
+    <result column="amount" property="amount" jdbcType="BIGINT" />
+    <result column="currency" property="currency" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="TINYINT" />
+    <result column="client_ip" property="clientIp" jdbcType="VARCHAR" />
+    <result column="device" property="device" jdbcType="VARCHAR" />
+    <result column="subject" property="subject" jdbcType="VARCHAR" />
+    <result column="body" property="body" jdbcType="VARCHAR" />
+    <result column="extra" property="extra" jdbcType="VARCHAR" />
+    <result column="channel_mch_id" property="channelMchId" jdbcType="VARCHAR" />
+    <result column="channel_order_no" property="channelOrderNo" jdbcType="VARCHAR" />
+    <result column="err_code" property="errCode" jdbcType="VARCHAR" />
+    <result column="err_msg" property="errMsg" jdbcType="VARCHAR" />
+    <result column="param1" property="param1" jdbcType="VARCHAR" />
+    <result column="param2" property="param2" jdbcType="VARCHAR" />
+    <result column="notify_url" property="notifyUrl" jdbcType="VARCHAR" />
+    <result column="notify_count" property="notifyCount" jdbcType="TINYINT" />
+    <result column="last_notify_time" property="lastNotifyTime" jdbcType="BIGINT" />
+    <result column="expire_time" property="expireTime" jdbcType="BIGINT" />
+    <result column="pay_succ_time" property="paySuccTime" jdbcType="BIGINT" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

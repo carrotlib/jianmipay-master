@@ -1,0 +1,20 @@
+<!-- http://findbugs.sourceforge.net/bugDescriptions.html -->
+
+<FindBugsFilter>
+
+    <Match>
+        <Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2,SE_BAD_FIELD" />
+    </Match>
+
+    <Match>
+        <Bug pattern="EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC" />
+    </Match>
+
+    <Match>
+        <Bug pattern="SS_SHOULD_BE_STATIC,SIC_INNER_SHOULD_BE_STATIC" />
+    </Match>
+
+    <Match>
+        <Bug category="STYLE" />
+    </Match>
+</FindBugsFilter>
