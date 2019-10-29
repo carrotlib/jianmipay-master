@@ -1,11 +1,13 @@
 package com.carrotlib.jianmipay.service;
 
+import net.sf.json.JSONObject;
+
 /**
  * @author fenghaitao on 2019/10/28
  */
 public interface IPayOrderService {
 
-    String createPayOrder(String jsonParam);
+    JSONObject createPayOrder(String jsonParam);
 
     String selectPayOrder(String jsonParam);
 
@@ -21,11 +23,11 @@ public interface IPayOrderService {
 
     String updateNotify(String jsonParam);
 
-    //int createPayOrder(String payOrder);
+    int createPayOrder(JSONObject payOrder);
 
-    String queryPayOrder(String mchId, String payOrderId, String mchOrderNo, String executeNotify);
+    JSONObject queryPayOrder(String mchId, String payOrderId, String mchOrderNo, String executeNotify);
 
-    String doWxPayReq(String tradeType, String payOrder, String resKey);
+    String doWxPayReq(String tradeType, JSONObject payOrder, String resKey);
 
-    String doAliPayReq(String channelId, String payOrder, String resKey);
+    String doAliPayReq(String channelId, JSONObject payOrder, String resKey);
 }

@@ -1,11 +1,13 @@
 package com.carrotlib.jianmipay.service;
 
+import net.sf.json.JSONObject;
+
 /**
  * @author fenghaitao on 2019/10/28
  */
 public interface IMchInfoService {
 
-    String selectMchInfo(String jsonParam);
+    JSONObject selectMchInfo(JSONObject jsonParam);
 
-    String getByMchId(String mchId);
+    JSONObject getByMchId(String mchId);
 }

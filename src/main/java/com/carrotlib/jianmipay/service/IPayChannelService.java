@@ -1,11 +1,13 @@
 package com.carrotlib.jianmipay.service;
 
+import net.sf.json.JSONObject;
+
 /**
  * @author fenghaitao on 2019/10/28
  */
 public interface IPayChannelService {
 
-    String selectPayChannel(String jsonParam);
+    JSONObject selectPayChannel(JSONObject jsonParam);
 
-    String getByMchIdAndChannelId(String mchId, String channelId);
+    JSONObject getByMchIdAndChannelId(String mchId, String channelId);
 }
