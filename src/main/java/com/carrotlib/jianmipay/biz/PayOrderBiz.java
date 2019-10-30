@@ -2,8 +2,8 @@ package com.carrotlib.jianmipay.biz;
 
 import com.carrotlib.jianmipay.consts.PayConstant;
 import com.carrotlib.jianmipay.mapper.model.PayOrder;
-import com.carrotlib.jianmipay.service.IMchInfoService;
-import com.carrotlib.jianmipay.service.IPayChannelService;
+import com.carrotlib.jianmipay.service.MchInfoService;
+import com.carrotlib.jianmipay.service.PayChannelService;
 import com.carrotlib.jianmipay.utils.PaySeqUtil;
 import com.carrotlib.jianmipay.utils.PayUtil;
 import net.sf.json.JSONObject;
@@ -11,7 +11,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -97,10 +96,10 @@ public class PayOrderBiz {
     private static final String BODY = "body";
 
     @Resource
-    private IMchInfoService mchInfoService;
+    private MchInfoService mchInfoService;
 
     @Resource
-    private IPayChannelService payChannelService;
+    private PayChannelService payChannelService;
 
     /**
      * 验证创建订单请求参数，合法则返回JSONObejct对象，非法则返回对应的错误信息
