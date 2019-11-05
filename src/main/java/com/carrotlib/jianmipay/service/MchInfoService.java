@@ -7,7 +7,7 @@ import net.sf.json.JSONObject;
  */
 public interface MchInfoService {
 
-    JSONObject selectMchInfo(JSONObject jsonParam);
+    JSONObject selectMchInfo(JSONObject paramJson);
 
     JSONObject getByMchId(String mchId);
 }

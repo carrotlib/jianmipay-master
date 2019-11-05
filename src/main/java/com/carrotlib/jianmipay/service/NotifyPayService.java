@@ -7,11 +7,11 @@ import java.util.Map;
  */
 public interface NotifyPayService {
 
-    String doAliPayNotify(String jsonParam);
+    Map doAliPayNotify(String paramJson);
 
-    String doWxPayNotify(String jsonParam);
+    Map doWxPayNotify(String paramJson);
 
-    String sendBizPayNotify(String jsonParam);
+    Map sendBizPayNotify(String paramJson);
 
     String handleAliPayNotify(Map params);
 

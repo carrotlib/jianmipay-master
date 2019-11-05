@@ -33,7 +33,7 @@ public class BasePayService {
         return mchInfoMapper.selectByPrimaryKey(mchId);
     }
 
-    public PayChannel baseSelectpayChannel(String mchId, String channelId) {
+    public PayChannel baseSelectPayChannel(String mchId, String channelId) {
 
         Example example = new Example(PayChannel.class);
         Example.Criteria criteria = example.createCriteria();

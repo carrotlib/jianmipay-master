@@ -5,8 +5,11 @@ import com.carrotlib.jianmipay.consts.PayEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * 支付工具类
@@ -95,5 +98,39 @@ public class PayUtil {
             return false;
         }
         return true;
+    }
+
+    public static String genUrlParams(Map<String, Object> paraMap) {
+        if(paraMap == null || paraMap.isEmpty()) return "";
+        StringBuffer urlParam = new StringBuffer();
+        Set<String> keySet = paraMap.keySet();
+        int i = 0;
+        for(String key:keySet) {
+            urlParam.append(key).append("=").append(paraMap.get(key));
+            if(++i == keySet.size()) break;
+            urlParam.append("&");
+        }
+        return urlParam.toString();
+    }
+
+    /**
+     * 发起HTTP/HTTPS请求(method=POST)
+     * @param url
+     * @return
+     */
+    public static String call4Post(String url) {
+        try {
+            URL url1 = new URL(url);
+            if("https".equals(url1.getProtocol())) {
+                return HttpClient.callHttpsPost(url);
+            }else if("http".equals(url1.getProtocol())) {
+                return HttpClient.callHttpPost(url);
+            }else {
+                return "";
+            }
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        return "";
     }
 }

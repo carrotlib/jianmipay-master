@@ -14,9 +14,44 @@ public enum RetEnum {
      * 通讯层相关错误码，00开始进行标识
      */
     RET_REMOTE_UNAVAILABLE("0001", "远程服务不可用"),
-    RET_REMOTE_INVALID(),
-    RET
+    RET_REMOTE_INVALID("0002", "客户端非法调用"),
+    RET_NO_BIZ_SEQUENCE_NO("0003", "远程服务调用业务流水号不存在"),
+    RET_REMOTE_CHECK_SIGN_FAIL("0004", "远程服务调用签名验证失败"),
+    RET_REMOTE_RPC_SEQ_NO_REPEATED("0005", "随机通讯码在指定时间内失效"),
+    RET_REMOTE_SIGN_INVALID("0006", "远程服务调用签名计算方式错误"),
+    RET_REMOTE_DEAL_EXCEPTION("0007", "远程调用处理异常"),
+    RET_REMOTE_PROTOCOL_INVALID("0008", "客户端调用协议非法"),
+    RET_REMOTE_HTTP_METHOD_INVALID("0009", "客户端请求方式非法"),
 
+    /**
+     * 参数校验相关错误码，01开始进行标识
+     */
+    RET_PARAM_NOT_FOUND("0101", "参数不存在"),
+    RET_PARAM_INVALID("0102", "无效的参数"),
+    RET_PARAM_TOO_LARGE_LIST("0103", "列表超长"),
+    RET_PARAM_TYPE_INVALID("0104", "参数类型错误"),
+    RET_CURRENT_PAGE_INVALID("0105", "当前页码非法"),
+    RET_VIEW_NUMBER_INVALID("0106", "分页显示数目非法"),
+    RET_VIEW_LIMIT_INVALID("0107", "数据排列显示数目非法"),
+
+    /**
+     * db操作相关错误码，10开始进行标识
+     */
+    RET_DB_FAIL("1001", "数据库操作失败"),
+
+    /**
+     * 业务操作失败错误码，11开始进行标识
+     */
+    RET_BIZ_DATA_NOT_EXISTS("1101", "数据不存在"),
+    RET_BIZ_SIGN_DATA_FAIL("1102", "商户签名数据不正确"),
+    RET_BIZ_WX_PAY_CREATE_FAIL("1103", "微信支付下单失败"),
+    RET_BIZ_ALI_PAY_CREATE_FIAL("1104", "支付宝支付下单失败"),
+    RET_BIZ_PAY_NOTIFY_VERIFY_FAIL("1105", "支付通知验证数据不正确"),
+
+    /**
+     * 未知错误
+     */
+    RET_UNKNOW_ERROR("9999", "未知错误");
 
     private String code;
 

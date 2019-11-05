@@ -1,15 +1,18 @@
 package com.carrotlib.jianmipay.service;
 
+import java.util.Map;
+
 /**
  * @author fenghaitao on 2019/10/28
  */
 public interface PayChannel4AliService {
 
-    String doAliPayWapReq(String jsonParam);
+    Map doAliPayWapReq(String paramJson);
 
-    String doAliPayPcReq(String jsonParam);
+    Map doAliPayPcReq(String paramJson);
 
-    String doAliPayMobileReq(String jsonParam);
+    Map doAliPayMobileReq(String paramJson);
 
-    String doAliPayQrReq(String jsonParam);
+    Map doAliPayQrReq(String paramJson);
+
 }

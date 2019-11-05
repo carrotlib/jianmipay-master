@@ -2,26 +2,28 @@ package com.carrotlib.jianmipay.service;
 
 import net.sf.json.JSONObject;
 
+import java.util.Map;
+
 /**
  * @author fenghaitao on 2019/10/28
  */
 public interface PayOrderService {
 
-    JSONObject createPayOrder(String jsonParam);
+    Map createPayOrder(String paramJson);
 
-    String selectPayOrder(String jsonParam);
+    Map selectPayOrder(String paramJson);
 
-    String selectPayOrderByMchIdAndPayOrderId(String jsonParam);
+    Map selectPayOrderByMchIdAndPayOrderId(String paramJson);
 
-    String selectPayOrderByMchIdAndMchOrderNo(String jsonParam);
+    Map selectPayOrderByMchIdAndMchOrderNo(String paramJson);
 
-    String updateStatus4Ing(String jsonParam);
+    Map updateStatus4Ing(String paramJson);
 
-    String updateStatus4Success(String jsonParam);
+    Map updateStatus4Success(String paramJson);
 
-    String updateStatus4Complete(String jsonParam);
+    Map updateStatus4Complete(String paramJson);
 
-    String updateNotify(String jsonParam);
+    Map updateNotify(String paramJson);
 
     int createPayOrder(JSONObject payOrder);
 
