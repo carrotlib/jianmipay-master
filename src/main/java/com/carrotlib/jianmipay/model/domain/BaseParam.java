@@ -29,7 +29,7 @@ public class BaseParam extends RPCBaseParam {
                 .append(super.getRpcDateTime())
                 .append(super.getRpcSignType())
                 .append(super.getBizSequenceNo());
-        super.setRpcSign(RPCSignUtil.sha1(decriptBuffer.toString());
+        super.setRpcSign(RPCSignUtil.sha1(decriptBuffer.toString()));
         this.bizParamMap = new HashMap<String, Object>();
     }
 
